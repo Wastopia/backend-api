@@ -1,0 +1,31 @@
+{
+  "canisters": {
+    "wms": {
+      "type": "custom",
+      "root": "src",
+      "main": "src/index.ts",
+      "ts": "src/index.ts",
+      "candid": "src/index.did",
+      "build": "npx azle wms",
+      "wasm": ".azle/wms/wms.wasm",
+      "gzip": true
+    },
+    "internet_identity": {
+      "type": "custom",
+      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz",
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      },
+      "frontend": {}
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "0.0.0.0:8000",
+      "type": "ephemeral"
+    }
+  }
+}

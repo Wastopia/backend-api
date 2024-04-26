@@ -1,0 +1,39 @@
+{
+  "name": "wms",
+  "version": "0.0.1",
+  "private": true,
+  "description": "A waste management system built on the Internet Computer",
+  "author": "Edmund Albores",
+  "license": "MIT",
+  "scripts": {
+    "dfx_install": "DFX_VERSION=0.17.0 sh -ci \"$(curl -fsSL https://sdk.dfinity.org/install.sh)\"",
+    "replica_start": "dfx start --clean --background",
+    "replica_stop": "dfx stop",
+    "canister_deploy_local": "dfx deploy cms",
+    "canister_deploy_mainnet": "dfx deploy --network ic cms",
+    "canister_uninstall": "dfx canister uninstall-code cms",
+    "internet_identity_deploy_local": "dfx deploy internet_identity",
+    "internet_identity_uninstall": "dfx canister uninstall-code internet_identity",
+    "canister_call": "dfx canister call cms"
+  },
+  "dependencies": {
+    "azle": "^0.20.2",
+    "uuid": "^9.0.1",
+    "express": "^4.18.2",
+    "lit": "^3.1.1"
+  },
+  "devDependencies": {
+    "@types/uuid": "^9.0.7",
+    "@types/express": "^4.17.21"
+  },
+  "engines": {
+    "node": "^12 || ^14 || ^16 || ^18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ICPHubPH/content-management-system-icp"
+  },
+  "bugs": {
+    "url": "https://github.com/ICPHubPH/content-management-system-icp/issues"
+  }
+}
